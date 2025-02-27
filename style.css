@@ -1,0 +1,210 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #f8cbdf, #a6c1ee);
+}
+
+/* Container styling */
+.container {
+    width: 1200px; /* Increased width */
+    height: 600px; /* Added height */
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Login container styling */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-container .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container .btn:hover {
+    background-color: #ff8a73;
+    transform: scale(1.05);
+}
+
+.login-container .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Title styling */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #ff8a73;
+    transform: scale(1.05);
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Controls container */
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Output container */
+.output {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    min-height: 200px; /* Increased min-height */
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.output:hover {
+    background-color: #f1f1f1;
+}
+
+/* Placeholder styling */
+.output::before {
+    content: attr(placeholder);
+    color: #999;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.output:empty::before {
+    display: block;
+}
+
+.output:not(:empty)::before {
+    display: none;
+}
+
+/* Select styling */
+select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+select:hover {
+    background-color: #f1f1f1;
+}
+
+/* Option styling */
+option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Loading animation */
+.loading {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff6f61;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <div id="login-error" class="error" style="display: none;">Invalid username or password</div>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      if (username === 'SOJAN' && password === 'Rosi8870') {
+        localStorage.setItem('loggedIn', 'true');
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('login-error').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
